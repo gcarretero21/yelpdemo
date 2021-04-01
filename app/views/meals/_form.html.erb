@@ -1,4 +1,4 @@
-<%= form_with(model: meal) do |form| %>
+<%= form_with(model: meal, :html => { multipart: true }) do |form| %>
   <% if meal.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(meal.errors.count, "error") %> prohibited this meal from being saved:</h2>
@@ -34,6 +34,11 @@
   <div class="form-group">
     <%= form.label :item4 %>
     <%= form.text_field :item4, class: "form-control" %>
+  </div>
+
+   <div class="form-group">
+    <%= form.label :avatar %>
+    <%= form.file_field :avatar, class: "form-control" %>
   </div>
 
   <div class="actions">
