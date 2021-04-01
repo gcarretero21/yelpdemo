@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_01_193738) do
+ActiveRecord::Schema.define(version: 2021_04_01_214015) do
 
   create_table "meals", force: :cascade do |t|
     t.string "day_time"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(version: 2021_04_01_193738) do
     t.string "address"
     t.string "phone"
     t.string "website"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

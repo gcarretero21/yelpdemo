@@ -14,14 +14,14 @@ pre {
   font-size: 11px; }
 
 a {
-  color: #FFC300; }
+  color: #000; }
 
 a:visited {
   color: #666; }
 
 a:hover {
   color: #fff;
-  background-color: #FFC300; }
+  background-color: #000; }
 
 th {
   padding-bottom: 5px; }
@@ -63,13 +63,3 @@ div.actions {
 
 label {
   display: block; }
-
-  .jumbo {
-    background-color: #FFC300;
-    border: 1px solid #dfd13b;
-
-    h2 {
-    color: #ffffff;
-    font-weight: bold;
-  }
-  }
