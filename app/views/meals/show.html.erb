@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day time:</strong>
+  <%= @meal.day_time %>
+</p>
+
+<p>
+  <strong>Item1:</strong>
+  <%= @meal.item1 %>
+</p>
+
+<p>
+  <strong>Item2:</strong>
+  <%= @meal.item2 %>
+</p>
+
+<p>
+  <strong>Item3:</strong>
+  <%= @meal.item3 %>
+</p>
+
+<p>
+  <strong>Item4:</strong>
+  <%= @meal.item4 %>
+</p>
+
+<%= link_to 'Edit', edit_meal_path(@meal), class: "btn btn-link" %> |
+<%= link_to 'Back', meals_path, class: "btn btn-link" %>

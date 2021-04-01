@@ -1,0 +1,42 @@
+<%= form_with(model: meal) do |form| %>
+  <% if meal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(meal.errors.count, "error") %> prohibited this meal from being saved:</h2>
+
+      <ul>
+        <% meal.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :day_time %>
+    <%= form.text_field :day_time, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :item1 %>
+    <%= form.text_field :item1, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :item2 %>
+    <%= form.text_field :item2, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :item3 %>
+    <%= form.text_field :item3, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :item4 %>
+    <%= form.text_field :item4, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-outline-warning" %>
+  </div>
+<% end %>
