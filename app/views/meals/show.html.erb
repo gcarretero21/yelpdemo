@@ -27,6 +27,6 @@
   <strong>Item4:</strong>
   <%= @meal.item4 %>
 </p>
-
+<%= link_to "Write Review", new_meal_review_path(@meal), class: "btn btn-primary" %>
 <%= link_to 'Edit', edit_meal_path(@meal), class: "btn btn-link" %> |
 <%= link_to 'Back', meals_path, class: "btn btn-link" %>
