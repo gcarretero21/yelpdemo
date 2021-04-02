@@ -8,6 +8,7 @@ class MealsController < ApplicationController
 
   # GET /meals/1 or /meals/1.json
   def show
+    @reviews = Review.where(meal_id: @meal.id)
   end
 
   # GET /meals/new
