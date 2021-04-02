@@ -1,5 +1,17 @@
 class MealsController < ApplicationController
   before_action :set_meal, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: [:search, :index, :show]
+  before_action :check_user, except: [:search, :index, :show]
+
+
+  def search
+    if params[:search].present?
+     @meals = Meal.search(params[:search])
+    else
+     @meals = Meal.all
+    end
+  end
+
 
   # GET /meals or /meals.json
   def index
