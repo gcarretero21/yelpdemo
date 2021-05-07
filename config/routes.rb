@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'profile/liked'
+  get 'profile/reviewed'
   devise_for :users
   resources :meals do
   	#search will apply to more than one restaurant

@@ -1,7 +1,7 @@
 class MealsController < ApplicationController
   before_action :set_meal, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:search, :index, :show]
-  before_action :check_user, except: [:search, :index, :show]
+  
 
 
   def search
