@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="/"> TIGER EATS </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,12 +13,13 @@
       <ul class="navbar-nav">
         <% if user_signed_in? %>
           <li class="nav-item"><a class="nav-link" href="/users/edit"> Edit Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="/profile/reviewed"> Meals Reviewed</a></li>
           <li class="nav-item"><a class="nav-link" data-method="delete" href="<%= destroy_user_session_path %>">
             <i class="fa fa-sign-out" aria-hidden="true"></i><span class="hidden-xs hidden-sm"> Sign Out</span>
           </a></li>
-           <li class="nav-item"><a class="nav-link" href="/profile/liked"> Liked Meals</a></li>
-           <li class="nav-item"><a class="nav-link" href="/profile/reviewed"> Meals Reviewed</a></li>
-
+           <!--li class="nav-item"><a class="nav-link" href="/profile/liked"> Liked Meals</a></li-->
+           
+           <!---->
           <!-- Put personal page here -->
         <% else %>
           <li class="nav-item"><a class="nav-link" href="/users/sign_up"> Sign Up</a></li>
@@ -25,15 +27,6 @@
         <% end %>
       </ul>
       <br><br>
-
-
-      <%= form_tag search_meals_path, method: :get, class: "form-inline my-2 my-lg-0" do %>
-      <p>
-      <%= text_field_tag :search, params[:search], class: "form-control mr-sm-2" %>
-      <%= submit_tag  "Search", name: nil, class: "btn btn-outline-success my-2 my-sm-0" %>
-      </p>
-      <ul class="nav navbar-nav navbar-right">
-      <% end %>
     </div>
   </div>
 </nav>

@@ -27,7 +27,7 @@
 
   <div class="col-md-9">
     <% if @reviews.blank? %>
-    <h3> This item does not have any reviews yet. Be ther first to write one! </h3>
+    <h3> This item does not have any reviews yet. Be the first to write one! </h3>
     <% else %>
       <% @reviews.each do |review| %>
         <p><%= review.rating %></p>

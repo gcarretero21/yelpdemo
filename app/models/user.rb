@@ -5,4 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :reviews, dependent: :destroy 
+
+ def reviews
+    @user = User.find(params[:id])
+    @reviews = @user.reviews
+  end
+
+
 end

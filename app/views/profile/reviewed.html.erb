@@ -1,13 +1,10 @@
 <h1>Here's all the Meals you reviewed!</h1>
 
-<h3> Meal: Monday-Breakfast </h3>
 
-<h5>Omelet Bar, Spring Valley Farms Eggs to Order, Scrambled Eggs </h5>
-<h5>Chinese Mushroom Congee</h5>
-<h5>Oatmeal, Strawberry Cheesecake Stuffed French Toast</h5>
-<h5>Breakfast Potatoes, Roasted Vegetable, Cameron Farms Pork Sausage, Turkey Bacon</h5>
 
-<p> Your Review: </p>
-<p> 4 </p>
-<p>omelet tasted great! </p>
+<% @reviews.each do |review| %>
+  <%= review.inspect %>
+<% end %>
+
+
 

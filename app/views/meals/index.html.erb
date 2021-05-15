@@ -3,11 +3,19 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Welcome to Tiger Eats!</h1>
-    <h4 class="lead"> Tiger Eats is the best way to get what you want from your dinning hall. Explore the favorite meals in the DePauw community. Leave reviews and ratings for your your fellow foodies!</h4>
+    <h3 class="lead"> Check out this weeks menu & leave reviews and ratings for your your fellow foodies!</h3>
   </div>
 </div>
 
 <p id="notice"><%= notice %></p>
+
+
+      <%= form_tag search_meals_path, method: :get, class: "navbar-form navbar-left" do %>
+      <p>
+      <%= text_field_tag :search, params[:search], class: "form-control" %>
+      <%= submit_tag  "Search", name: nil, class: "btn btn-default" %>
+      </p>
+      <% end %>
 
 <h1>Meals</h1>
 
