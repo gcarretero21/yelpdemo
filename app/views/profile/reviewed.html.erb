@@ -1,5 +1,6 @@
 <h1>Here's all the Meals you reviewed!</h1>
 
+<%= link_to review.user.name, user_review_path(post.user) %>
 
 
 <% @reviews.each do |review| %>
